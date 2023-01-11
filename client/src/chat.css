@@ -10,18 +10,31 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 3% 22% 80%;
+  grid-template-columns: 3% 17% 80%;
   grid-template-rows: 70% 30%;
   grid-template-areas:
     "side1 side2 chat"
     "side1 side2 terminal";
 }
 
+.chating-warp {
+  background: url("./background.png");
+  background-size: cover;
+}
+
+#chathead {
+  width: 100%;
+  height: 10%;
+  object-fit: fill;
+  margin: 0;
+}
+
 .chat-warp {
-  background-color: rgb(11, 11, 20);
   height: 70vh;
   grid-area: chat;
   border-bottom: 1px solid black;
+  background: url("./background.png");
+  background-size: cover;
 }
 
 .side-bar {
@@ -29,6 +42,11 @@ body {
   height: 100vh;
   grid-area: side2;
   border-right: 1px solid black;
+}
+.side-bar img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
 }
 
 .side-bar2 {
@@ -40,210 +58,26 @@ body {
   flex-direction: column;
 }
 
+.side-bar2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.terminal-head img {
+  width: 100%;
+  object-fit: fill;
+}
+
 .side-border {
   border-left: 2px solid rgb(0, 255, 204);
 }
 
 .terminal {
-  background-color: rgba(10, 10, 10);
-
+  /* background-color: rgba(10, 10, 10); */
+  background: url("./terminal_background.png");
   height: 30vh;
   grid-area: terminal;
-}
-
-.head-container {
-  color: gray;
-  font-size: 13px;
-  display: flex;
-}
-
-.html-box {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 30px;
-  border-bottom: 1px solid aqua;
-  color: white;
-}
-
-.html-box img {
-  width: 13px;
-  height: 13px;
-}
-
-.html-box-side {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 30px;
-  margin-left: 6px;
-}
-
-.html-box-side span {
-  color: aqua;
-  font-size: 13px;
-}
-
-.breadcrumbs-html-box {
-  border: none;
-  color: gray;
-  width: 90px;
-  margin-left: 12px;
-  margin-top: 6px;
-}
-.breadcrumbs-html-box img {
-  width: 13px;
-  height: 13px;
-}
-#breadcrumbs-html-span {
-  font-size: 13px;
-}
-
-.html-box-side img {
-  width: 13px;
-  height: 13px;
-}
-
-.html-box span {
-  margin-left: 5px;
-}
-
-.css-box {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 30px;
-}
-.css-box img {
-  width: 13px;
-  height: 13px;
-}
-.css-box span {
-  margin-left: 5px;
-}
-
-.js-box {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 30px;
-}
-.js-box img {
-  width: 12px;
-  height: 12px;
-}
-
-.js-box span {
-  margin-left: 5px;
-}
-
-.breadcrumbs {
-  color: gray;
-  font-size: 13px;
-  display: flex;
-}
-
-.box-box img {
-  width: 14.5px;
-  height: 10.5px;
-  filter: invert(22%) sepia(94%) saturate(2572%) hue-rotate(212deg)
-    brightness(105%) contrast(108%);
-}
-
-.box-box {
-  width: 240px;
-  height: 27px;
-  display: flex;
-  float: left;
-  align-items: center;
-  justify-content: center;
-}
-
-.terminal-head-options img {
-  margin: 3px;
-  filter: invert(84%) sepia(2%) saturate(0%) hue-rotate(147deg) brightness(82%)
-    contrast(91%);
-}
-
-.terminal-head-options {
-  display: flex;
-  align-items: center;
-  margin-left: 460px;
-}
-
-.side-bar2-icons img {
-  width: 25px;
-  height: 25px;
-  margin: 8px;
-  filter: invert(46%) sepia(0%) saturate(3431%) hue-rotate(8deg)
-    brightness(114%) contrast(77%);
-}
-
-.side-bar-2-icons-end {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 62vh;
-}
-
-.dot {
-  filter: invert(46%) sepia(0%) saturate(3431%) hue-rotate(8deg)
-    brightness(114%) contrast(77%);
-  width: 13px;
-  height: 13px;
-}
-
-.down-arrow {
-  filter: invert(46%) sepia(0%) saturate(3431%) hue-rotate(8deg)
-    brightness(114%) contrast(77%);
-  width: 12px;
-  height: 12px;
-}
-
-.side-header-box {
-  margin: 10px;
-}
-
-#explorer {
-  color: #acacac;
-  font-size: 13px;
-  margin-left: 17px;
-}
-
-.down-arrow-box {
-  margin: 5px;
-}
-
-#open-editors {
-  font-weight: bold;
-  color: gray;
-  font-size: 13px;
-}
-
-.css {
-  margin-left: 10px;
-}
-
-.side-css-box {
-  display: flex;
-  flex-direction: column;
-}
-
-#side-index_css {
-  color: gray;
-  font-size: 13px;
-}
-
-.chat-list {
-  margin-left: 5px;
 }
 
 #chat-list-1 {
@@ -278,79 +112,6 @@ body {
   color: aqua;
 }
 
-.open-folder-box {
-  margin: 10px;
-}
-
-#my_project {
-  font-weight: bold;
-  color: gray;
-  font-size: 13px;
-}
-
-#js-side-span {
-  color: gray;
-  font-size: 13px;
-}
-
-.terminal-head {
-  margin: 2px;
-  display: flex;
-}
-
-.terminal-head span {
-  color: rgb(158, 158, 158);
-  font-size: 12px;
-  margin: 15px;
-}
-
-#terminal-span {
-  color: white;
-  font-size: 12px;
-  margin: 15px;
-  border-bottom: 1px solid aqua;
-}
-
-.arrow-right {
-  width: 13px;
-  height: 13px;
-}
-
-#bash {
-  font-size: 13px;
-  color: #acacac;
-}
-
-.plus-button {
-  width: 13px;
-  height: 13px;
-}
-
-.angle_down {
-  width: 10px;
-  height: 10px;
-}
-
-.leyout {
-  width: 18px;
-  height: 18px;
-}
-
-.biggarbagebin {
-  width: 18px;
-  height: 18px;
-}
-
-.angle_up {
-  width: 12px;
-  height: 12px;
-}
-
-#terminal-x {
-  font-size: 15px;
-  color: #acacac;
-}
-
 .defalut-text {
   color: #acacac;
   font-size: 13px;
@@ -358,11 +119,13 @@ body {
   flex-direction: column;
   margin: 10px;
   margin-left: 20px;
+  font-weight: 600;
 }
 
 #chat-list-content {
   color: gray;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .input {
@@ -395,13 +158,16 @@ body {
 
 .chat-list span {
   font-size: 13px;
+  font-weight: 600;
 }
 
 #chat-list-username {
   font-size: 13px;
+  font-weight: 600;
 }
 
 #chat-list-content {
   font-size: 13px;
   color: #acacac;
+  font-weight: 600;
 }

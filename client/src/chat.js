@@ -86,15 +86,6 @@ function Chat({ socket, username, room }) {
 
             <div className="chat-input">
               <div className="defalut-text">
-                <span>The default interactive shell is now zsh.</span>
-                <span>
-                  To update your account to use zsh, please run `chsh -s
-                  /bin/zsh`.
-                </span>
-                <span>
-                  For more details, please visit
-                  https://support.apple.com/kb/HT208050.
-                </span>
                 <span>
                   macui-MacBook-Air:myProject mac${" "}
                   <input
