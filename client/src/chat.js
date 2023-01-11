@@ -9,6 +9,7 @@ function Chat({ socket, username, room }) {
   const [messageContent, setMessageContent] = useState([]);
 
   useEffect(() => {
+    //백엔드에서 받아온 메세지 데이터를 state에 담는 코드
     socket.on("get_message", (data) => {
       console.log(data);
       setMessageContent((content) => [...content, data]);
@@ -16,6 +17,7 @@ function Chat({ socket, username, room }) {
     });
   }, [socket]);
 
+  //메세지를 백엔드로 보내는 코드
   const sendMessage = async (e) => {
     if (message !== "") {
       const messageData = {

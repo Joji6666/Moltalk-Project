@@ -13,6 +13,7 @@ export default function MainPage() {
   const [room, setRoom] = useState("");
   const [chatOn, setChatOn] = useState(false);
 
+  //소켓io 방 참가 코드
   const joinRoom = () => {
     if (username !== "" && room !== "") {
       socket.emit("join_room", room);
